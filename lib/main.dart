@@ -1,6 +1,5 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-
 import 'new_page.dart';
 
 void main() {
@@ -82,7 +81,7 @@ class MyHomePage extends StatelessWidget {
             ListTile(
               title: Text('Page Three'),
               trailing: Icon(Icons.close),
-              //closing the drawer
+              //closing the
               onTap: () => Navigator.of(context).pop(),
             ),
           ],
