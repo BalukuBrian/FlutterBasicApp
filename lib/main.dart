@@ -35,26 +35,26 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Drawer App'),
+        title: const Text('Baluku Drawer App'),
         elevation: defaultTargetPlatform == TargetPlatform.android ? 5.0 : 0.0,
       ),
       drawer: Drawer(
         child: ListView(
           children: <Widget>[
             UserAccountsDrawerHeader(
-              accountName: Text('Baluku Brian'),
-              accountEmail: Text("balbri0@gmail.com"),
+              accountName: const Text('Baluku Brian'),
+              accountEmail: const Text("balbri0@gmail.com"),
               currentAccountPicture: CircleAvatar(
                 backgroundColor:
                     Theme.of(context).platform == TargetPlatform.iOS
                         ? Colors.deepPurple
                         : Colors.white,
-                child: Text('BB'),
+                child: const Text('BB'),
               ),
               otherAccountsPictures: <Widget>[
                 CircleAvatar(
                   backgroundColor: Colors.white,
-                  child: Text('B'),
+                  child: const Text('B'),
                 )
               ],
             ),
