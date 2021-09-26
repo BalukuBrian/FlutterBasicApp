@@ -12,11 +12,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "Baluku General App",
-      theme: ThemeData(primarySwatch: Colors.orange),
-      home: const GmailClone(
-          //title: "GmailClone",
-          ),
+      theme: ThemeData(primarySwatch: Colors.pink),
+      home: const GmailClone(),
     );
   }
 }

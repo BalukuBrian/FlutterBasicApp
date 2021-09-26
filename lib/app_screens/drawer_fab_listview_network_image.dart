@@ -10,36 +10,55 @@ class GmailClone extends StatefulWidget {
 }
 
 class _GmailCloneState extends State<GmailClone> {
+  
   var myText = "What is my Bujju's Name";
-  final TextEditingController _nameController = TextEditingController();
+  final myController = TextEditingController();
+
+  @override
+  void dispose() {
+    // Clean up the controller when the widget is disposed.
+    myController.dispose();
+    super.dispose();
+  }
+  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Baluku Brian App"),
+        title: const Text("Bujju App"),
       ),
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.all(9.0),
+          padding: const EdgeInsets.all(7.0),
           child: SingleChildScrollView(
             child: Card(
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(10.0),
                 child: Column(
                   children: <Widget>[
-                    Image.asset("assets/balbri.jpg"),
+                    Image.asset(
+                      "assets/balbri.jpg",
+                      //fit: BoxFit.cover,
+                      height: 150,
+                      width: 150,
+                    ),
                     const SizedBox(
                       height: 20,
                     ),
-                    const Text("what is my name"),
+                    const Text(
+                      "What is my Bujju's name?",
+                      style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,),
+                    ),
                     const SizedBox(
                       height: 10,
                     ),
-                    const TextField(
+                    TextField(
                       //controller: _nameController,
+                      controller: myController,
                       decoration: InputDecoration(
                         labelText: "Name",
-                        hintText: "Enter my name",
+                        hintText: "Enter my Bujju's name",
                         border: OutlineInputBorder(),
                       ),
                     ),
@@ -50,7 +69,7 @@ class _GmailCloneState extends State<GmailClone> {
                       //controller: _nameController,
                       decoration: InputDecoration(
                         labelText: "Course",
-                        hintText: "Enter Course",
+                        hintText: "Enter  Bujju's Course",
                         border: OutlineInputBorder(),
                       ),
                     ),
@@ -58,11 +77,9 @@ class _GmailCloneState extends State<GmailClone> {
                       height: 10,
                     ),
                     const TextField(
-                      //controller: _nameController,
-                      // keyboardType: TextInputType(),
                       decoration: InputDecoration(
                         labelText: "Age",
-                        hintText: "Enter my Age",
+                        hintText: "Enter my  Bujju's Age",
                         border: OutlineInputBorder(),
                       ),
                     ),
@@ -75,9 +92,19 @@ class _GmailCloneState extends State<GmailClone> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          myText = _nameController.text;
+          myText = myController.text;
           setState(() {});
-        },
+            showDialog(
+              context: context,
+              builder: (context) {
+                return AlertDialog(                  
+                  content: Text(myController.text),
+                );
+              },
+            );
+          },
+          tooltip: 'Show me the name value!',
+          //child: Icon(Icons.text_fields),
         elevation: 10,
         child: const Icon(Icons.send),
       ),
@@ -100,18 +127,35 @@ class _GmailCloneState extends State<GmailClone> {
             ),
             ListTile(
               onTap: () {},
-              leading: const Icon(Icons.other_houses),
-              title: const Text("Mbarara University"),
-              subtitle: const Text("Mbarara Town"),
-              trailing: const Icon(Icons.edit),
+              leading: const Icon(Icons.calculate),
+              title: const Text("Calculate"),
             ),
             ListTile(
               onTap: () {},
-              leading: const Icon(Icons.computer),
-              title: const Text("Kelsey"),
-              subtitle: const Text("MUST"),
-              trailing: const Icon(Icons.edit),
+              leading: const Icon(Icons.build),
+              title: const Text("About The App"),
             ),
+            ListTile(
+              onTap: () {},
+              leading: const Icon(Icons.help),
+              title: const Text("FAQs"),
+            ),
+            ListTile(
+              onTap: () {},
+              leading: const Icon(Icons.app_settings_alt),
+              title: const Text("Settings"),
+            ),
+            ListTile(
+              onTap: () {},
+              leading: const Icon(Icons.devices_other),
+              title: const Text("Our other Apps"),
+            ),
+            ListTile(
+              onTap: () {},
+              leading: const Icon(Icons.share),
+              title: const Text("Share"),
+            ), 
+
           ],
         ),
       ),
