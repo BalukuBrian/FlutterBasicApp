@@ -1,8 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-
 import 'app_screens/drawer_fab_listview_network_image.dart';
-import 'app_screens/my_home_page.dart';
 
 void main() {
   runApp(const MyApp());
