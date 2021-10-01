@@ -20,11 +20,11 @@ class HomePage extends StatelessWidget {
         //clipBehavior: Clip.antiAlias, // can be used interchangably with borderRadius
         decoration: BoxDecoration(
           color: Colors.green,
-          shape: BoxShape.circle,
-          borderRadius: BorderRadius.circular(10),
-          gradient: const LinearGradient(
-            colors: [Colors.red, Colors.blue],
-          ),
+          //shape: BoxShape.circle,
+          //borderRadius: BorderRadius.circular(10),
+          // gradient: const LinearGradient(
+          //   colors: [Colors.red, Colors.blue],
+          // ),
           boxShadow: [
             const BoxShadow(
               color: Colors.grey,
