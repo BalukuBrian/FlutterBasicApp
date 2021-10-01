@@ -56,7 +56,7 @@ class _GmailCloneState extends State<GmailClone> {
                     TextField(
                       //controller: _nameController,
                       controller: myController,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         labelText: "Name",
                         hintText: "Enter my Bujju's name",
                         border: OutlineInputBorder(),

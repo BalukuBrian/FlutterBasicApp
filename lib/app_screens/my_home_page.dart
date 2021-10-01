@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.all(20),
         alignment: Alignment.center,
         //clipBehavior: Clip.antiAlias, // can be used interchangably with borderRadius
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Colors.green,
           //shape: BoxShape.circle,
           //borderRadius: BorderRadius.circular(10),
@@ -26,7 +26,7 @@ class HomePage extends StatelessWidget {
           //   colors: [Colors.red, Colors.blue],
           // ),
           boxShadow: [
-            const BoxShadow(
+             BoxShadow(
               color: Colors.grey,
             ),
           ],
