@@ -1,6 +1,9 @@
 import "package:flutter/material.dart";
 
+import 'drawer_fab_listview_network_image.dart';
+
 class LoginPage extends StatefulWidget {
+  static const String routeName = "/login";
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
@@ -31,7 +34,7 @@ class _LoginPageState extends State<LoginPage> {
           ),
           Center(
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(16.0),
               child: SingleChildScrollView(
                 child: Form(
                   key: formKey,
@@ -43,6 +46,7 @@ class _LoginPageState extends State<LoginPage> {
                           TextFormField(
                             controller: _usernameController,
                             keyboardType: TextInputType.emailAddress,
+                            //TODO: validator: () {},
                             decoration: const InputDecoration(
                               labelText: 'Username',
                               hintText: 'Enter Email Address',
@@ -54,6 +58,7 @@ class _LoginPageState extends State<LoginPage> {
                           TextFormField(
                             controller: _passwordController,
                             keyboardType: TextInputType.text,
+                            //TODO: validator: () {},
                             obscureText: true,
                             decoration: const InputDecoration(
                               labelText: 'Password',
@@ -64,7 +69,23 @@ class _LoginPageState extends State<LoginPage> {
                             height: 20,
                           ),
                           ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              //TODO: implement the validator in the formField first
+                              //TODO: formKey.currentState!.validate();
+
+                              /* 
+                               * method 1 of routing
+                               * helps in passing data
+                               */
+                              // Navigator.push(
+                              //   context,
+                              //   MaterialPageRoute(
+                              //       builder: (context) => const GmailClone()),
+                              // );
+
+                              Navigator.pushNamed(
+                                  context, GmailClone.routeName);
+                            },
                             child: const Text("Sign In"),
                           ),
                         ],

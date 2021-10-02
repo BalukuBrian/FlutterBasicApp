@@ -1,3 +1,4 @@
+import 'package:baluku_general_app/app_screens/drawer_fab_listview_network_image.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'app_screens/login_page.dart';
@@ -20,6 +21,10 @@ class MyApp extends StatelessWidget {
       // home: const HomePage(
       //   title: "Home Page",
       // ),
+      routes: {
+        LoginPage.routeName: (context) => LoginPage(),
+        GmailClone.routeName: (context) => GmailClone(),
+      },
     );
   }
 }

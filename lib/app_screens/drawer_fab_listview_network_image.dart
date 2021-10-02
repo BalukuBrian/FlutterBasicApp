@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class GmailClone extends StatefulWidget {
+  static const String routeName = "/GmailClone";
   const GmailClone({
     Key? key,
   }) : super(key: key);
@@ -10,7 +11,6 @@ class GmailClone extends StatefulWidget {
 }
 
 class _GmailCloneState extends State<GmailClone> {
-  
   var myText = "What is my Bujju's Name";
   final myController = TextEditingController();
 
@@ -20,13 +20,20 @@ class _GmailCloneState extends State<GmailClone> {
     myController.dispose();
     super.dispose();
   }
-  
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Bujju App"),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(Icons.exit_to_app),
+          )
+        ],
       ),
       body: Center(
         child: Padding(
@@ -48,7 +55,10 @@ class _GmailCloneState extends State<GmailClone> {
                     ),
                     const Text(
                       "What is my Bujju's name?",
-                      style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,),
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     const SizedBox(
                       height: 10,
@@ -94,17 +104,17 @@ class _GmailCloneState extends State<GmailClone> {
         onPressed: () {
           myText = myController.text;
           setState(() {});
-            showDialog(
-              context: context,
-              builder: (context) {
-                return AlertDialog(                  
-                  content: Text(myController.text),
-                );
-              },
-            );
-          },
-          tooltip: 'Show me the name value!',
-          //child: Icon(Icons.text_fields),
+          showDialog(
+            context: context,
+            builder: (context) {
+              return AlertDialog(
+                content: Text(myController.text),
+              );
+            },
+          );
+        },
+        tooltip: 'Show me the name value!',
+        //child: Icon(Icons.text_fields),
         elevation: 10,
         child: const Icon(Icons.send),
       ),
@@ -154,8 +164,7 @@ class _GmailCloneState extends State<GmailClone> {
               onTap: () {},
               leading: const Icon(Icons.share),
               title: const Text("Share"),
-            ), 
-
+            ),
           ],
         ),
       ),
