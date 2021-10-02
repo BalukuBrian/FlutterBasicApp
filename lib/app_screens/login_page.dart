@@ -22,8 +22,10 @@ class _LoginPageState extends State<LoginPage> {
         fit: StackFit.expand,
         children: [
           Image.asset(
-            "assets/balbri.png",
+            "assets/balbri.jpg",
             fit: BoxFit.cover,
+            // height: 500,
+            // width: 400,
             color: Colors.black.withOpacity(0.7),
             colorBlendMode: BlendMode.darken,
           ),
@@ -47,7 +49,7 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                           ),
                           const SizedBox(
-                            height: 20,
+                            height: 10,
                           ),
                           TextFormField(
                             controller: _passwordController,
