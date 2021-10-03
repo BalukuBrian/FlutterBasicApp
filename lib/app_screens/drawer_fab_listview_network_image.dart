@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class GmailClone extends StatefulWidget {
   static const String routeName = "/GmailClone";
   const GmailClone({
@@ -127,6 +128,11 @@ class _GmailCloneState extends State<GmailClone> {
               currentAccountPicture: CircleAvatar(
                 backgroundImage: AssetImage("assets/balbri.jpg"),
               ),
+              otherAccountsPictures: [
+                CircleAvatar(
+                  backgroundImage: AssetImage("assets/baluku.jpg"),
+                ),
+              ],
             ),
             ListTile(
               onTap: () {},

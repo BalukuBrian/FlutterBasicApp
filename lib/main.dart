@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       // ),
       routes: {
         LoginPage.routeName: (context) => LoginPage(),
-        GmailClone.routeName: (context) => GmailClone(),
+        GmailClone.routeName: (context) => const GmailClone(),
       },
     );
   }
