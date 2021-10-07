@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
 
-import 'drawer_fab_listview_network_image.dart';
+//import 'drawer_fab_listview_network_image.dart';
 
 class LoginPage extends StatefulWidget {
   static const String routeName = "/login";
@@ -12,8 +12,8 @@ class _LoginPageState extends State<LoginPage> {
   final formKey = GlobalKey<FormState>();
 
   final _usernameController = TextEditingController();
-
   final _passwordController = TextEditingController();
+  final _emailController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -44,11 +44,16 @@ class _LoginPageState extends State<LoginPage> {
                       child: Column(
                         children: <Widget>[
                           TextFormField(
-                            controller: _usernameController,
+                            controller: _emailController,
                             keyboardType: TextInputType.emailAddress,
-                            //TODO: validator: () {},
+                            validator: (value) {
+                              if (value == null || value.isEmpty) {
+                                return 'Please Enter some text';
+                              }
+                              return null;
+                            },
                             decoration: const InputDecoration(
-                              labelText: 'Username',
+                              labelText: 'Email',
                               hintText: 'Enter Email Address',
                             ),
                           ),
@@ -56,9 +61,34 @@ class _LoginPageState extends State<LoginPage> {
                             height: 10,
                           ),
                           TextFormField(
+                            controller: _usernameController,
+                            keyboardType: TextInputType.text,
+                            validator: (value) {
+                              if (value == null || value.isEmpty) {
+                                return 'Please Enter Username';
+                              }
+                              return null;
+                            },
+                            decoration: const InputDecoration(
+                              labelText: 'Username',
+                              hintText: 'Enter Username',
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          TextFormField(
                             controller: _passwordController,
                             keyboardType: TextInputType.text,
-                            //TODO: validator: () {},
+                            validator: (value) {
+                              if (value == null || value.isEmpty) {
+                                return 'Please Enter some text';
+                              }
+                              return null;
+                            },
                             obscureText: true,
                             decoration: const InputDecoration(
                               labelText: 'Password',
@@ -71,7 +101,13 @@ class _LoginPageState extends State<LoginPage> {
                           ElevatedButton(
                             onPressed: () {
                               //TODO: implement the validator in the formField first
-                              //TODO: formKey.currentState!.validate();
+                              
+                              if (formKey.currentState!.validate()) {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  const SnackBar(
+                                      content: Text('Processing Data')),
+                                );
+                              }
 
                               /* 
                                * method 1 of routing
@@ -83,8 +119,8 @@ class _LoginPageState extends State<LoginPage> {
                               //       builder: (context) => const GmailClone()),
                               // );
 
-                              Navigator.pushNamed(
-                                  context, GmailClone.routeName);
+                              // Navigator.pushNamed(
+                              //     context, GmailClone.routeName,);
                             },
                             child: const Text("Sign In"),
                           ),
