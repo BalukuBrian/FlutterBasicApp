@@ -75,12 +75,28 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  #fonts:
+  fonts:
+    - family: Lato
+      fonts:
+        - asset: fonts/Lato-Bold.ttf
+          weight: 700
+        - asset: fonts/Lato-BoldItalic.ttf
+          weight: 700
+        - asset: fonts/Lato-Italic.ttf
+          style: italic
+        - asset: fonts/Lato-BoldItalic.ttf
+          weight: 400
+        - asset: fonts/Lato-Regular.ttf
+          weight: 400
+        - asset: fonts/Lato-Thin.ttf
+          weight: 100
+
     # - family: Schyler
     #   fonts:
     #     - asset: fonts/Schyler-Regular.ttf
     #     - asset: fonts/Schyler-Italic.ttf
     #       style: italic
+    
     # - family: Trajan Pro
     #   fonts:
     #     - asset: fonts/TrajanPro.ttf
