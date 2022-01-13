@@ -11,6 +11,16 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Baluku Drawer App'),
         elevation: defaultTargetPlatform == TargetPlatform.android ? 5.0 : 0.0,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.search),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: const Icon(Icons.more_vert),
+            onPressed: () {},
+          ),
+        ],
       ),
       body: Container(
         width: 100,
@@ -26,7 +36,7 @@ class HomePage extends StatelessWidget {
           //   colors: [Colors.red, Colors.blue],
           // ),
           boxShadow: [
-             BoxShadow(
+            BoxShadow(
               color: Colors.grey,
             ),
           ],

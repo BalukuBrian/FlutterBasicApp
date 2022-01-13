@@ -1,9 +1,13 @@
 import "package:flutter/material.dart";
 
+import 'drawer_fab_listview_network_image.dart';
+
 //import 'drawer_fab_listview_network_image.dart';
 
 class LoginPage extends StatefulWidget {
   static const String routeName = "/login";
+
+  const LoginPage({Key? key}) : super(key: key);
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
@@ -48,7 +52,7 @@ class _LoginPageState extends State<LoginPage> {
                             keyboardType: TextInputType.emailAddress,
                             validator: (value) {
                               if (value == null || value.isEmpty) {
-                                return 'Please Enter some text';
+                                return 'Please Enter Email';
                               }
                               return null;
                             },
@@ -85,7 +89,7 @@ class _LoginPageState extends State<LoginPage> {
                             keyboardType: TextInputType.text,
                             validator: (value) {
                               if (value == null || value.isEmpty) {
-                                return 'Please Enter some text';
+                                return 'Please Enter Password';
                               }
                               return null;
                             },
@@ -101,11 +105,15 @@ class _LoginPageState extends State<LoginPage> {
                           ElevatedButton(
                             onPressed: () {
                               //TODO: implement the validator in the formField first
-                              
+
                               if (formKey.currentState!.validate()) {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(
-                                      content: Text('Processing Data')),
+                                // ScaffoldMessenger.of(context).showSnackBar(
+                                //   const SnackBar(
+                                //       content: Text('Processing Data')),
+                                // );
+                                Navigator.pushNamed(
+                                  context,
+                                  GmailClone.routeName,
                                 );
                               }
 

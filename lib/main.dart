@@ -16,14 +16,15 @@ class MyApp extends StatelessWidget {
       title: "Baluku General App",
       theme: ThemeData(primarySwatch: Colors.pink),
       //home: const GmailClone(),
-      home: LoginPage(),
+      home: const LoginPage(),
       // home: const HomePage(
       //   title: "Home Page",
       // ),
       routes: {
-        LoginPage.routeName: (context) => LoginPage(),
+        LoginPage.routeName: (context) => const LoginPage(),
         GmailClone.routeName: (context) => const GmailClone(),
       },
     );
   }
+  
 }

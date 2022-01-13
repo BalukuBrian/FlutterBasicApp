@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class GmailClone extends StatefulWidget {
   static const String routeName = "/GmailClone";
   const GmailClone({
@@ -36,65 +35,95 @@ class _GmailCloneState extends State<GmailClone> {
           )
         ],
       ),
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(7.0),
-          child: SingleChildScrollView(
-            child: Card(
-              child: Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Column(
-                  children: <Widget>[
-                    Image.asset(
-                      "assets/balbri.jpg",
-                      //fit: BoxFit.cover,
-                      height: 150,
-                      width: 150,
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    const Text(
-                      "What is my Bujju's name?",
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
+      body: SafeArea(
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(7.0),
+            child: SingleChildScrollView(
+              child: Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Column(
+                    children: <Widget>[
+                      Image.asset(
+                        "assets/balbri.jpg",
+                        //fit: BoxFit.cover,
+                        height: 150,
+                        width: 150,
                       ),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    TextField(
-                      //controller: _nameController,
-                      controller: myController,
-                      decoration: const InputDecoration(
-                        labelText: "Name",
-                        hintText: "Enter my Bujju's name",
-                        border: OutlineInputBorder(),
+                      const SizedBox(
+                        height: 20,
                       ),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    const TextField(
-                      //controller: _nameController,
-                      decoration: InputDecoration(
-                        labelText: "Course",
-                        hintText: "Enter  Bujju's Course",
-                        border: OutlineInputBorder(),
+                      const Text(
+                        "What is my Bujju's name?",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    const TextField(
-                      decoration: InputDecoration(
-                        labelText: "Age",
-                        hintText: "Enter my  Bujju's Age",
-                        border: OutlineInputBorder(),
+                      const SizedBox(
+                        height: 10,
                       ),
-                    ),
-                  ],
+                      TextField(
+                        //controller: _nameController,
+                        controller: myController,
+                        decoration: const InputDecoration(
+                          labelText: "Name",
+                          hintText: "Enter my Bujju's name",
+                          border: OutlineInputBorder(),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      const TextField(
+                        //controller: _nameController,
+                        decoration: InputDecoration(
+                          labelText: "Course",
+                          hintText: "Enter  Bujju's Course",
+                          border: OutlineInputBorder(),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      const TextField(
+                        decoration: InputDecoration(
+                          labelText: "Age",
+                          hintText: "Enter my  Bujju's Age",
+                          border: OutlineInputBorder(),
+                        ),
+                      ),
+                      Center(
+                        child: RichText(
+                          text: const TextSpan(
+                            text: 'Development',
+                            style: TextStyle(
+                              fontSize: 20.0,
+                              color: Colors.pink,
+                              decoration: TextDecoration.underline,
+                              decorationColor: Colors.deepPurpleAccent,
+                              decorationStyle: TextDecorationStyle.dotted,
+                              // fontStyle: FontStyle.italic,
+                              fontWeight: FontWeight.normal,
+                            ),
+                            children: <TextSpan>[
+                              TextSpan(
+                                text: ' for',
+                              ),
+                              TextSpan(
+                                text: ' Mobile',
+                                style: TextStyle(
+                                    color: Colors.deepOrange,
+                                    fontStyle: FontStyle.normal,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
