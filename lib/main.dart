@@ -15,8 +15,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Baluku General App",
       theme: ThemeData(primarySwatch: Colors.pink),
-      //home: const GmailClone(),
-      home: const LoginPage(),
+      home: const GmailClone(),
+      // home: const LoginPage(),
       // home: const HomePage(
       //   title: "Home Page",
       // ),
@@ -26,5 +26,4 @@ class MyApp extends StatelessWidget {
       },
     );
   }
-  
 }
