@@ -1,4 +1,4 @@
-import 'package:baluku_general_app/app_screens/drawer_fab_listview_network_image.dart';
+import 'package:baluku_general_app/app_screens/home_page.dart';
 import 'package:flutter/material.dart';
 import 'app_screens/login_page.dart';
 
@@ -15,14 +15,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Baluku General App",
       theme: ThemeData(primarySwatch: Colors.pink),
-      home: const GmailClone(),
+      home: const HomePage(),
       // home: const LoginPage(),
       // home: const HomePage(
       //   title: "Home Page",
       // ),
       routes: {
         LoginPage.routeName: (context) => const LoginPage(),
-        GmailClone.routeName: (context) => const GmailClone(),
+        HomePage.routeName: (context) => const HomePage(),
       },
     );
   }

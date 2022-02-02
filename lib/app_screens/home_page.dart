@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-class GmailClone extends StatefulWidget {
-  static const String routeName = "/GmailClone";
-  const GmailClone({
+class HomePage extends StatefulWidget {
+  static const String routeName = "/HomePage";
+  const HomePage({
     Key? key,
   }) : super(key: key);
 
   @override
-  State<GmailClone> createState() => _GmailCloneState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _GmailCloneState extends State<GmailClone> {
+class _HomePageState extends State<HomePage> {
   //for the bottom Navigation
   int _selectedIndex = 0;
   var myText = "What is my Bujju's Name";
@@ -76,14 +76,17 @@ class _GmailCloneState extends State<GmailClone> {
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
           label: 'Home',
+          backgroundColor: Colors.pink,
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.business),
           label: 'Business',
+          backgroundColor: Colors.deepOrange,
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.school),
           label: 'School',
+          backgroundColor: Colors.purple,
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.settings),
@@ -92,7 +95,6 @@ class _GmailCloneState extends State<GmailClone> {
         BottomNavigationBarItem(
           icon: Icon(Icons.chat_rounded),
           label: 'Chat',
-          backgroundColor: Colors.pink,
         ),
       ],
       currentIndex: _selectedIndex,
