@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Baluku Drawer App'),
+        title: const Text('Balbri Login'),
         elevation: defaultTargetPlatform == TargetPlatform.android ? 5.0 : 0.0,
         actions: [
           IconButton(
@@ -29,7 +29,7 @@ class HomePage extends StatelessWidget {
         alignment: Alignment.center,
         //clipBehavior: Clip.antiAlias, // can be used interchangably with borderRadius
         decoration: const BoxDecoration(
-          color: Colors.green,
+          color: Colors.blue,
           //shape: BoxShape.circle,
           //borderRadius: BorderRadius.circular(10),
           // gradient: const LinearGradient(

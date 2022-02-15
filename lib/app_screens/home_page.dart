@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'home_popup_menu.dart';
+
 class HomePage extends StatefulWidget {
   static const String routeName = "/HomePage";
   const HomePage({
@@ -33,14 +35,15 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Bujju App"),
+        title: const Text("Balbri HomePage"),
         actions: [
           IconButton(
             onPressed: () {
               Navigator.pop(context);
             },
             icon: const Icon(Icons.exit_to_app),
-          )
+          ),
+          HomePopupMenu(),
         ],
       ),
       body: Center(
@@ -64,6 +67,7 @@ class _HomePageState extends State<HomePage> {
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       floatingActionButton: createFAB(context),
 
+      //drawer
       drawer: _buildDrawer(),
 
       //floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
