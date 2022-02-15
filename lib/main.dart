@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'app_screens/login_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MyApp()); 
 }
 
 class MyApp extends StatelessWidget {
