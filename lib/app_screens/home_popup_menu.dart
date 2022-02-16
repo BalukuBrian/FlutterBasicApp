@@ -14,7 +14,7 @@ class HomePopupMenu extends StatefulWidget {
 
 class _HomePopupMenuState extends State<HomePopupMenu> {
   var _popupMenuItemIndex = 0;
-  Color _changeColorAccordingToMenuItem = Colors.pink;
+  Color _changeColorAccordingToMenuItem = Colors.white;
   var appBarHeight = AppBar().preferredSize.height;
 
   @override
@@ -24,6 +24,8 @@ class _HomePopupMenuState extends State<HomePopupMenu> {
         title: const Text("Balbri Popup Menu"),
         actions: [
           PopupMenuButton(
+            icon: const Icon(Icons.more_horiz),
+            enabled: true,
             onSelected: (value) {
               _onMenuItemSelected(value as int);
             },
@@ -47,8 +49,27 @@ class _HomePopupMenuState extends State<HomePopupMenu> {
         ],
       ),
       body: Container(
-        color: _changeColorAccordingToMenuItem,
-      ),
+          //color: _changeColorAccordingToMenuItem,
+          child: ButtonBar(
+        alignment: MainAxisAlignment.center,
+        children: [
+          ElevatedButton(
+            child: const Text("Yes"),
+            //color: Colors.green,
+            onPressed: () {},
+          ),
+          ElevatedButton(
+            child: const Text("No"),
+            // textColor: Colors.white,
+            // color: Colors.green,
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: const Icon(Icons.map),
+            onPressed: () {},
+          ),
+        ],
+      )),
     );
   }
 
