@@ -1,4 +1,4 @@
-import 'package:baluku_general_app/app_screens/home_page.dart';
+// import 'package:baluku_general_app/app_screens/home_page.dart';
 import 'package:flutter/material.dart';
 import 'app_screens/home_popup_menu.dart';
 import 'app_screens/login_page.dart';
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       // ),
       routes: {
         LoginPage.routeName: (context) => const LoginPage(),
-        HomePage.routeName: (context) => const HomePage(),
+        // HomePage.routeName: (context) => const HomePage(),
       },
     );
   }

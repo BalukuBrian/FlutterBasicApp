@@ -48,28 +48,42 @@ class _HomePopupMenuState extends State<HomePopupMenu> {
           ),
         ],
       ),
-      body: Container(
-          //color: _changeColorAccordingToMenuItem,
-          child: ButtonBar(
-        alignment: MainAxisAlignment.center,
-        children: [
-          ElevatedButton(
-            child: const Text("Yes"),
-            //color: Colors.green,
-            onPressed: () {},
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              children: [
+                Container(
+                  //color: _changeColorAccordingToMenuItem,
+                  child: ButtonBar(
+                    alignment: MainAxisAlignment.center,
+                    children: [
+                      ElevatedButton(
+                        child: const Text("Yes"),
+                        //color: Colors.green,
+                        onPressed: () {},
+                      ),
+                      ElevatedButton(
+                        child: const Text("No"),
+                        onPressed: () {},
+                      ),
+                      IconButton(
+                        icon: const Icon(Icons.map),
+                        color: Colors.pink,
+                        onPressed: () {},
+                      ),
+                    ],
+                  ),
+                ),
+                const Divider(),
+                const ImagesAndIconWidget(),
+                const Divider(),
+              ],
+            ),
           ),
-          ElevatedButton(
-            child: const Text("No"),
-            // textColor: Colors.white,
-            // color: Colors.green,
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: const Icon(Icons.map),
-            onPressed: () {},
-          ),
-        ],
-      )),
+        ),
+      ),
     );
   }
 
@@ -103,5 +117,41 @@ class _HomePopupMenuState extends State<HomePopupMenu> {
     } else {
       _changeColorAccordingToMenuItem = Colors.purple;
     }
+  }
+}
+
+class ImagesAndIconWidget extends StatelessWidget {
+  const ImagesAndIconWidget({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: <Widget>[
+        Expanded(
+          child: Image(
+            image: const AssetImage("assets/balbri.jpg"),
+            //color: Colors.orange,
+            fit: BoxFit.cover,
+            width: MediaQuery.of(context).size.width / 3,
+          ),
+        ),
+        Expanded(
+          child: Image.network(
+            'https://logowik.com/content/uploads/images/flutter5786.jpg',
+            width: MediaQuery.of(context).size.width / 3,
+          ),
+        ),
+        const Expanded(
+          child: Icon(
+            Icons.brush,
+            color: Colors.lightBlue,
+            size: 48.0,
+          ),
+        ),
+      ],
+    );
   }
 }

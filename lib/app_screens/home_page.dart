@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'home_popup_menu.dart';
+// import 'home_popup_menu.dart';
 
 class HomePage extends StatefulWidget {
   static const String routeName = "/HomePage";
@@ -43,7 +42,7 @@ class _HomePageState extends State<HomePage> {
             },
             icon: const Icon(Icons.exit_to_app),
           ),
-          HomePopupMenu(),
+          //const HomePopupMenu(),
         ],
       ),
       body: Center(
