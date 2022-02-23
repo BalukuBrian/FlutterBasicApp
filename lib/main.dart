@@ -1,7 +1,7 @@
 // import 'package:baluku_general_app/app_screens/home_page.dart';
 import 'package:flutter/material.dart';
-import 'app_screens/home_popup_menu.dart';
-import 'app_screens/login_page.dart';
+import 'pages/home_popup_menu.dart';
+import 'pages/login_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,9 +16,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Flutter Basic App",
       theme: ThemeData(primarySwatch: Colors.pink),
-      home: const HomePopupMenu(),
+      // home: const HomePopupMenu(),
       // home: const HomePage(),
-      // home: const LoginPage(),
+      home: const SafeArea(
+        child: LoginPage(),
+      ),
       // home: const HomePage(
       //   title: "Home Page",
       // ),
