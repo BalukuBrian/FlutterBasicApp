@@ -1,3 +1,3 @@
-# drawer_app
+# flutter_basic_app
 
-This Project tends to create a basic User interface for the Google Gmail App
+This Project tends to create a simple flutter app
