@@ -1,6 +1,6 @@
 // import 'package:baluku_general_app/app_screens/home_page.dart';
 import 'package:flutter/material.dart';
-import 'pages/home_popup_menu.dart';
+import 'package:flutter_basic_app/pages/form_validation_class.dart';
 import 'pages/login_page.dart';
 
 void main() {
@@ -18,8 +18,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(primarySwatch: Colors.pink),
       // home: const HomePopupMenu(),
       // home: const HomePage(),
+      // home: const SafeArea(
+      //   child: LoginPage(),
+      // ),
       home: const SafeArea(
-        child: LoginPage(),
+        child: FormValidationClass(),
       ),
       // home: const HomePage(
       //   title: "Home Page",
