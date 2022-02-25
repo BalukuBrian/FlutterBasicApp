@@ -73,9 +73,9 @@ class _FormValidationClassState extends State<FormValidationClass> {
                               validator: RequiredValidator(
                                   errorText: "Quantity Required"),
                             ),
-                            const Divider(
-                              height: 32.0,
-                            ),
+                            // const Divider(
+                            //   height: 32.0,
+                            // ),
                             TextFormField(
                               controller: _emailController,
                               keyboardType: TextInputType.text,
